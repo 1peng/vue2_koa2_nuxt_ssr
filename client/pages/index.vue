@@ -5,9 +5,9 @@
       Universal Vue.js Application Framework
     </h1>
     <h2> <button @click="reduction">-</button> {{counter}} <button @click="increment">+</button></h2>
-    <a class="button" href="/about">
+    <nuxt-link class="button" to="/about">
       About page
-    </a>
+    </nuxt-link>
   </section>
 </template>
 <script>

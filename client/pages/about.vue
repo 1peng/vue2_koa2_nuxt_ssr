@@ -11,9 +11,9 @@
       {{about.text}} {{about.done?'恩':'不'}}
       <button @click="toggle(about)">toggle</button>
     </h3>
-    <a class="button" href="/">
+    <nuxt-link class="button" to="/">
       Home page
-    </a>
+    </nuxt-link>
     <h2>
       <input v-model="text" placeholder="请输入"/>
     </h2>
