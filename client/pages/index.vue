@@ -1,0 +1,39 @@
+<template>
+  <section class="container">
+    <img src="../assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
+    <h1 class="title">
+      Universal Vue.js Application Framework
+    </h1>
+    <h2> <button @click="reduction">-</button> {{counter}} <button @click="increment">+</button></h2>
+    <a class="button" href="/about">
+      About page
+    </a>
+  </section>
+</template>
+<script>
+  import { mapMutations, mapGetters } from 'vuex'
+  export default {
+    async asyncData ({ req }) {
+      return {
+        name: req ? 'server' : 'client'
+      }
+    },
+    head () {
+      return {
+        title: `Home Page (${this.name}-side)`
+      }
+    },
+    methods: {
+      ...mapMutations(['increment', 'reduction'])
+    },
+    computed: {
+      ...mapGetters(['counter'])
+    }
+  }
+</script>
+<style scoped>
+.title
+{
+  margin: 50px 0;
+}
+</style>

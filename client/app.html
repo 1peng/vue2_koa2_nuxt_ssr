@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+<head>
+  {{ HEAD }}
+  <script>
+    window.onerror = function (errorMessage, scriptURI, lineNumber, columnNumber, errorObj) {
+      var requestMessage = location.href + ' '
+        + errorMessage + ' '
+        + scriptURI + ' '
+        + lineNumber + ' '
+        + columnNumber + ' '
+        + JSON.stringify(errorObj) + ' '
+        + navigator.userAgent;
+
+      new Image().src="/error/reporter?err=" + encodeURIComponent(requestMessage);
+    }
+  </script>
+</head>
+<body {{ BODY_ATTRS }}>
+{{ APP }}
+</body>
+</html>
