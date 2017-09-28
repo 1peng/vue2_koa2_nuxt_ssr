@@ -1,7 +1,7 @@
 {
-  "name": "ssr_koa2",
+  "name": "vue2_koa2_nuxt_ssr",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
+  "description": "A vue project with koa2 and nuxt for ssr. Edit",
   "author": "Yipeng <228331207@qq.com>",
   "private": true,
   "scripts": {

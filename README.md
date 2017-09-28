@@ -1,6 +1,6 @@
-# ssr_koa2
+# vue2_koa2_nuxt_ssr
 
-> Nuxt.js project
+> A vue project with koa2 and nuxt for ssr.
 
 ## Build Setup
 
