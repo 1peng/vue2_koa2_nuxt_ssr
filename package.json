@@ -1,12 +1,14 @@
 {
   "name": "vue2_koa2_nuxt_ssr",
   "version": "1.0.0",
-  "description": "A vue project with koa2 and nuxt for ssr. Edit",
+  "description": "A vue project with koa2 and nuxt for ssr.",
   "author": "Yipeng <228331207@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "backpack dev",
-    "build": "nuxt build && backpack build",
+    "dev": "cross-env NODE_ENV=development node buildconf && backpack dev",
+    "alpha": "cross-env NODE_ENV=alpha node buildconf && nuxt build && backpack build",
+    "uat": "cross-env NODE_ENV=uat node buildconf && nuxt build && backpack build",
+    "build": "cross-env NODE_ENV=production node buildconf && nuxt build && backpack build",
     "start": "cross-env NODE_ENV=production node build/main.js",
     "precommit": "npm run lint",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."

@@ -62,7 +62,6 @@ app.use(ctx => {
   })
 })
 
-
 app.on('error', function (err, ctx) {
   logger.error('server error', err, ctx)
 })

@@ -11,10 +11,10 @@ router.get('/index', async function (ctx, next) {
 router.get('/list', async function (ctx, next) {
   ctx.body = [
     {
-      name:'yipeng', age: '29'
+      name: 'yipeng', age: '29'
     },
     {
-      name:'yihang', age: '18'
+      name: 'yihang', age: '18'
     }
   ]
 })
